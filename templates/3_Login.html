@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+                html, body {
+                height: 100%;
+                width: 100%;
+              }
+              *
+              {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+                list-style: none;
+                color:black;
+              }
+              body
+              {
+                background-image: url("https://www.shutterstock.com/image-photo/man-pressing-button-on-screen-600nw-2435739075.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+              }
+              .heading>p{
+                margin-left:50px;
+                color:white;
+                font-size:60px;
+                display:block;
+                padding:15px;
+                font-weight: bolder;
+              }
+              .container{
+                width:450px;
+                border-radius:35px;
+                overflow:hidden;
+                background-color:white;
+              }
+              .main_box
+              {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+              }
+              .one
+              {
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+              .one img{
+                width: 50px;
+                height:50px;
+              }
+              form{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 5px;
+                width: 60%;
+              }
+              form label{
+                display: block;
+                font-size: 20px;
+                font-weight: bold;
+                margin: 5px 0;
+              }
+              form input{
+                padding: 10px;
+                width: 100%;
+                border: 2px solid black;
+                border-radius: 15px;
+                font-size: 18px;
+                color: geay;
+              }
+              footer{
+                padding:0 5px;
+                width:60%;
+                margin:0 auto 50px;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+              }
+              footer h4{
+                text-align:center;
+              }
+              .foot
+              {
+                width:100%;
+                text-align:center;
+                padding:25px;
+                background: #e0e0e0;
+              }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="heading">
+          <p>TO</p>
+          <p>LOGIN</p>
+          <p>YOUR ACCOUNT</p>
+        </div>
+        <section class="container">
+          <div class="main_box">
+            <div class="one">
+              <img
+                src="https://st.depositphotos.com/1008709/4676/i/600/depositphotos_46768767-stock-photo-hands-in-art-logo.jpg"
+                alt="logo">
+              <h1>
+                WELCOME TO LOGIN
+              </h1><br>
+              <h4>
+                TO GO TO HOME PAGE
+              </h4>
+            </div><br>
+            <form method="POST">
+              {% csrf_token %} 
+              <div>
+                <label for="username">USERNAME</label>
+                <input type="text" name="username" placeholder="Username">
+              </div>
+              <div>
+                <label>PASSWORD</label>
+                <input type="password" name="password">
+              </div><br><br>
+
+              <input type="submit"></button>
+
+            </form><br><br>
+            <footer>
+                 {% for message in messages %}
+                   <p>{{message}}</p>
+                 {% endfor %}
+
+              <!-- <a href="">Don't Have an Account? </a> -->
+            </footer>
+            <div class="foot">
+              <a href="{% url 'Register_2' %}">REGISTER</a>
+            </div>
+          </div>
+        </section>
+      </body>
+    
+</body>
+</html>

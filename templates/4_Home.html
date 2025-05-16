@@ -1,0 +1,422 @@
+<!-- 
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <style>
+
+            /* CSS Document */
+
+            body {
+            margin: 0;
+            padding: 0;
+            background-color: #eeeeee;
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .logo {
+            float: left;
+            }
+            /* ~~ Top Navigation Bar ~~ */
+
+            #navigation-container {
+            width: 1200px;
+            margin: 0 auto;
+            height: 100px;
+            }
+
+            .navigation-bar {
+            background: rgba(0, 0, 0, 0.5); 
+            height: 70px;
+            width: 100%;
+            text-align:center;
+                
+            position: fixed; /* Set the navbar to fixed position */
+            top: 0; /* Position the navbar at the top of the page */
+            }
+            .navigation-bar img{
+            float:left;
+                width: 70px;
+                padding: 10px;
+            }
+            .navigation-bar ul {
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
+            display:inline-block;
+            vertical-align:top;
+            }
+
+            .navigation-bar li {
+            list-style-type: none;
+            padding: 0px;
+            height: 24px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            display: inline;
+            }
+
+            .navigation-bar li a {
+            color: white;
+            font-size: 14px;
+            letter-spacing: 3px;
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;  text-decoration: none;
+            line-height: 70px;
+            padding: 5px 35px;
+            opacity: 0.7;
+            }
+
+            .navigation-bar li a:hover {
+            font-weight: 500;
+            }
+
+            #menu {
+            float: right;
+            }
+
+            .container{
+                background-image: url("/static/images/A60.jpg");
+                background-attachment: fixed;
+                position: relative; top: 0; overflow:scroll;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                width: 100%;
+                height: 600px;
+                z-index: 0;
+                top: 0;
+            }
+
+            .row {
+            display: flex; /* equal height of the children */
+            }
+
+            .col {
+            flex: 1; /* additionally, equal width */
+            text-align: center;
+            padding: 70px 30px;
+            }
+
+            .button {
+                background-color: transparent;
+                border: 1px #222222 solid;
+                color: #222222;
+                padding: 15px 32px;
+                text-align: center;font-family: 'Playfair Display SC', serif;
+                font-weight: 700;
+                letter-spacing: 5px;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            .icon-calendar {
+                font-family: 'untitled-font-1';
+            color: #c6aaa1;}
+
+            .icon-map-marker {
+                font-family: 'untitled-font-1';
+            color: #b2c1cb;}
+
+            h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 20px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 20px;
+            }
+
+            h2 {
+                font-family: 'Playfair Display', serif;
+            font-size: 20px;
+                line-height: 15px;
+                font-style: italic;
+                font-weight: 400;	
+                color: #b5b5b5;
+                
+            }
+
+            .biglogo {
+                position: fixed;
+                width: 100%;
+                text-align: center;
+                z-index: 99;
+                top: 30%;
+            }
+
+            h3 {
+                font-family: 'Crimson Text', serif;
+                color: #eeeeee;
+                font-weight: 400;
+                font-style: italic;
+                margin-top: -80px;
+                margin-left: 100px;
+                letter-spacing: 5px;
+                word-spacing: 10px;
+            }
+
+            .yellowhighlight {
+                color: #e8da9b;
+            }
+    </style>
+</head>
+<body>
+    <html>
+<head>
+<meta charset="UTF-8">
+<title>HOME</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="https://file.myfontastic.com/4kMD7zPwq8YZAPpovuQHuJ/icons.css" rel="stylesheet"><style>
+ @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600i|Playfair+Display+SC:400,700|Playfair+Display:400,400i,700,700i|Raleway:400,500');
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="navigation-bar">
+
+
+    <div id="navigation-container">
+
+      
+      <ul>
+        <li><a href="{% url 'Teamates_5' %}">CONTRIBUTORS</a></li>
+        <li><a href="{% url 'Domain_Result_6' %}">DOMAIN_RESULT</a></li>
+        <li><a href="{% url 'Problem_Statement_7' %}">PROBLEM_STATEMENTS</a></li>
+        <li><a href="{% url 'Logout' %}">LOGOUT</a></li>
+      </ul>
+      
+    </div>
+  </div>
+    
+</div>
+<center><h1 style="color:black;font-size: 40px;"><b>ICU PATIENT RISK LEVEL PREDICTION USING ML<h1><b></center>
+   <br><br> <center><div>
+    <img src="{% static 'images/J.png' %}" alt="biglogo" width="300" border="20"></div><br></center>
+   
+    
+
+    <div class="col"><a href="{% url 'Per_Info_8' %}" class="button">PERSONAL INFORMATIONS</a>
+    <div class="col"><a href="{% url 'Deploy_9' %}" class="button">DEPLOYMENT</a>
+    <div class="col"><a href="{% url 'Per_Database_10' %}" class="button">PERSONAL_INFORMATION_DATABASE</a>
+
+</div>
+
+<center><h1><b>ICU PATIENT RISK LEVEL MONITORING SYSTEM<h1><b></center>
+    <p>The ICU Patient Risk Level Monitoring System is a critical component of modern healthcare, offering a comprehensive solution to ensure the well-being of patients in intensive care units. This system employs advanced medical sensors and data analytics to continuously monitor a patient's vital signs, including heart rate, blood pressure, oxygen saturation, and more. It processes this real-time data and employs machine learning algorithms to assess and predict the patient's risk levels, helping healthcare professionals identify potential complications or deterioration in a timely manner.
+
+        By analyzing historical patient data and leveraging predictive modeling, the system provides early warnings and risk assessments, enabling healthcare providers to intervene promptly and make informed decisions. This proactive approach can significantly improve patient outcomes, reduce the likelihood of adverse events, and enhance the overall quality of care in the ICU. Additionally, the system facilitates remote monitoring, allowing healthcare teams to access critical information from various locations, which is particularly valuable in times of high patient volume or emergencies. In summary, the ICU Patient Risk Level Monitoring System represents a vital advancement in patient care, combining technology and medical expertise to ensure the safety and well-being of those in critical condition.</p>
+
+    <br>
+
+    <center><h1><b>MACHINE LEARNING<h1><b></center>
+        <p>Machine Learning (ML) is a subfield of artificial intelligence (AI) that focuses on the development of algorithms and statistical models enabling computers to perform tasks without explicit programming. ML systems learn from data, recognizing patterns and making predictions or decisions based on that information. It encompasses various techniques, including supervised learning, unsupervised learning, and reinforcement learning. In supervised learning, models are trained on labeled data, while unsupervised learning involves extracting patterns from unlabeled data. Reinforcement learning employs a reward-based system for decision-making. ML applications are diverse, ranging from image and speech recognition to natural language processing and recommendation systems. As ML algorithms analyze and learn from data, their performance improves over time, making them valuable for tasks such as predictive analytics, autonomous vehicles, and personalized user experiences. The field continues to evolve, with ongoing research and advancements driving innovations in technology and problem-solving across various domains.</p>
+    
+        <br>
+
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Start Global Rules */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #a5d9f7;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  
+  /* Start Landing Page */
+  .landing-page header {
+    min-height: 80px;
+    display: flex;
+  }
+  @media (max-width: 767px) {
+    .landing-page header {
+      min-height: auto;
+      display: initial;
+    }
+  }
+  .landing-page header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (max-width: 767px) {
+    .landing-page header .container {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .landing-page header .logo {
+    color: #5d5d5d;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  @media (max-width: 767px) {
+    .landing-page header .logo {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .landing-page header .links {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: 767px) {
+    .landing-page header .links {
+      text-align: center;
+      gap: 10px;
+    }
+  }
+  .landing-page header .links li {
+    margin-left: 30px;
+    color: #5d5d5d;
+    cursor: pointer;
+    transition: .3s;
+  }
+  @media (max-width: 767px) {
+    .landing-page header .links li {
+      margin-left: auto;
+    }
+  }
+  .landing-page header .links li:last-child {
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #FFF;
+    background-color: #6c63ff;
+  }
+  .landing-page header .links li:not(:last-child):hover {
+    color: #6c63ff;
+  }
+  .landing-page .content .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 140px;
+    min-height: calc(100vh - 80px);
+  }
+  @media (max-width: 767px) {
+    .landing-page .content .container {
+      gap: 0;
+      min-height: calc(100vh - 101px);
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+  }
+  @media (max-width: 767px) {
+    .landing-page .content .info {
+      text-align: center;
+      margin-bottom: 15px 
+    }
+  }
+  .landing-page .content .info h1 {
+    color: #5d5d5d;
+    font-size: 44px;
+  }
+  .landing-page .content .info p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #5d5d5d;
+  }
+  .landing-page .content .info button {
+    border: 0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #6c63ff;
+    
+  }
+  .landing-page .content .image img {
+    max-width: 100%;
+  }
+  /* End Landing Page */
+  
+</style>
+
+<body>
+          <!-- Start Landing Page -->
+          <div class="landing-page">
+            <header>
+              <div class="container">
+                <a href="https://en.wikipedia.org/wiki/Intensive_care_unit" class="logo"> <b>ICU</b> PATIENTS RISK</a>
+                <!-- <ul class="links">
+                  <li>Home</li>
+                  <li>About Us</li>
+                  <li>Work</li>
+                  <li>Info</li>
+                  <li>Get Started</li>
+                </ul> -->
+              </div>
+            </header>
+            <div class="content">
+              <div class="container">
+                <div class="info">
+                  <h1>ICU PATIENTS RISK LEVEL PREDICTIONS</h1>
+                  <p>Machine Learning (ML) is a branch of artificial intelligence (AI) that enables computers to learn and make predictions or decisions without explicit programming. It involves developing algorithms that allow systems to recognize patterns, learn from data, and improve their performance over time. ML finds applications in various fields, from image recognition and natural language processing to recommendation systems and predictive analytics.</p>
+                  <a href="{% url 'Deploy_9' %}" id="one"><button id="explore-button">Model</button></a>
+                  
+                </div>
+                <div class="image">
+                  <img src="/static/images/img2.png" height="400px" width="2400px">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Landing Page -->
+</body>
+</html>

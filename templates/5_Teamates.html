@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAMATES</title>
+    <style>
+                            /* ======================================================================== */ 
+
+                    /*                      NOT RELATED TO THE TTUTORIAL                        */
+
+                    /* ======================================================================== */
+
+
+                    *{
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                        text-decoration: none;
+                        outline: none;
+                        list-style: none;
+                    }
+
+
+                    *,
+                    *::before,
+                    *::after {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                        text-decoration: none;
+                        outline: none;
+                        list-style: none;
+                    }
+
+
+                    :root {
+                    --step--2: clamp(0.69rem, calc(0.58rem + 0.60vw), 1.00rem);
+                    --step--1: clamp(0.83rem, calc(0.67rem + 0.81vw), 1.25rem);
+                    --step-0: clamp(1.00rem, calc(0.78rem + 1.10vw), 1.56rem);
+                    --step-1: clamp(1.20rem, calc(0.91rem + 1.47vw), 1.95rem);
+                    --step-2: clamp(1.44rem, calc(1.05rem + 1.95vw), 2.44rem);
+                    --step-3: clamp(1.73rem, calc(1.21rem + 2.58vw), 3.05rem);
+                    --step-4: clamp(2.07rem, calc(1.39rem + 3.40vw), 3.82rem);
+                    --step-5: clamp(2.49rem, calc(1.60rem + 4.45vw), 4.77rem);
+                        
+                        /* Font style */
+                        
+                        --ff-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                        
+                        /* Color style */
+                        
+                        --color-primary: #0575E6;
+                        --color-secondary: #6dd5ed;
+                        --color-primary-light:#8dc6ff;
+                        --color-primary-dark:#021B79;
+                        --color-error:#cc3333;
+                        --color-success:#4bb544;
+                        --color-link:#606470;
+                        --color-text:#5f6769;
+                        --color-header-dark:#393e46;
+                        --color-background:#f5f9ee;
+                        --color-border-sc:#ececec;
+                        --color-border-focus:#f04b19;
+                        --color-border:#d3d6db;
+                        --bs:#ffa857;
+                        --color-button:#f8e7e7;
+                        --color-percentage:#5f6769;
+                        --color-header-light:#9ba6a5;
+                        --color-border-focus:#f0b719;
+                        --color-input-background:#1d1f20;
+                        --gradient: linear-gradient(135deg var(--color-primary), var(--color-secondary));
+                        
+                        
+                    }
+
+                    /* Remove default margin */
+                    body,
+                    h1,
+                    h2,
+                    h3,
+                    h4,
+                    p,
+                    figure,
+                    blockquote,
+                    dl,
+                    dd {
+                    margin: 0;
+                    }
+
+                    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+                    ul[role='list'],
+                    ol[role='list'] {
+                    list-style: none;
+                    }
+
+
+                    /* Set core root defaults */
+                    html:focus-within {
+                    scroll-behavior: smooth;
+                    }
+
+                    /* Set core body defaults */
+                    body {
+                    min-height:  100vh;
+                    text-rendering: optimizeSpeed;
+                    line-height: 1.5;
+                    font-family: var(--ff-primary);
+                    }
+
+                    /* A elements that don't have a class get default styles */
+                    a:not([class]) {
+                    text-decoration-skip-ink: auto;
+                    }
+
+                    /* Make images easier to work with */
+                    img,
+                    picture {
+                    max-width: 100%;
+                    display: block;
+                    }
+
+                    /* Inherit fonts for inputs and buttons */
+                    input,
+                    button,
+                    textarea,
+                    select {
+                    font: inherit;
+                    }
+
+                    /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+                    @media (prefers-reduced-motion: reduce) {
+                    html:focus-within {
+                    scroll-behavior: auto;
+                    }
+                    
+                    *,
+                    *::before,
+                    *::after {
+                        animation-duration: 0.01ms !important;
+                        animation-iteration-count: 1 !important;
+                        transition-duration: 0.01ms !important;
+                        scroll-behavior: auto !important;
+                    }
+                    }
+
+                    html, body {
+                        height: 100%;
+                    }
+
+
+
+                    /* ======================================================================== */ 
+
+                    /*                      RELATED TO THE TTUTORIAL                        */
+
+                    /* ======================================================================== */
+
+
+
+
+                    body {
+                        background:url("/static/images/A35.jpg");
+                       background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: 100% 100%;
+                    }
+
+                    :is(input, button) {
+                        width: 100%;
+                        height: 54px;
+                        color: #f9f9f9;
+                        background: transparent;
+                        font-family: inherit;
+                        border-radius: .6rem;
+                        border: 0;
+                        outline: 0;
+                    }
+
+                    @media (width >= 500px) {
+                        body {
+                            padding: 0;
+                        }
+                    }
+
+                    @keyframes gradient {
+                        100% {
+                            background-size: 4000px 1000px;
+                        }
+                    }
+
+                    .login-wrapper {
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        translate: -50% -50%;
+                        width: 90%;
+                        text-align: center;
+                        padding: 70px 30px 44px;
+                        background: #161616;
+                        border-radius: 1rem;
+                    }
+
+                    @media (width >= 500px) {
+                        .login-wrapper {
+                            width: min(90%, 400px);
+                        }
+                    }
+
+                    .avatar {
+                        width: 170px;
+                        height: 170px;
+                        border-radius: 50%;
+                        background: linear-gradient(-45deg, #F09819, #FF512F);
+                        margin: 0 auto 16px;
+                        padding: 2px;
+                    }
+
+                    .avatar img {
+                        width: 100%;
+                        height: 100%;
+                        aspect-ratio: 1/1;
+                        object-fit: cover;
+                        border: 4px solid #161616;
+                        border-radius: 50%;
+                    }
+
+                    .login-form img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    h2 {
+                        font-size: var(--step-2);
+                        font-weight: 500;
+                        margin: 0 0 .5rem;
+                    }
+
+                    h3 {
+                        color: rgb(255 255 255 / 38%);
+                        font-weight: 400;
+                        margin: 0 0 2rem;
+                    }
+
+                    input {
+                        border: 1px solid red;
+                    }
+
+                    .login-form {
+                        display: grid;
+                        place-items: center;
+                        grid-gap: 1rem;
+                        width: 100%;
+                        margin: 0;
+                    }
+
+                    .input-group {
+                        position: relative;
+                        width: 100%;
+                    }
+
+                    .input-group input {
+                        color: inherit;
+                        border: 2px solid rgb(255, 255, 255, .1);
+                        padding: 0 1.5rem 0 3rem;
+                    }
+
+
+
+                    /* -----------------The start of Validation* ----------------- */
+
+                    :is(.input-group > input:focus, .input-group > input:not(:placeholder-shown)) {
+                        background-color: var(--color-input-background);
+                        border-color: var(--color-border-focus);
+                    }
+
+                    .input-group > input:focus:valid {
+                        box-shadow: 0 0 1px solid var(--color-success);
+                        border-color: var(--color-success);
+                    }
+
+                    .input-group > input:valid:not(:placeholder-shown) {
+                        border-color: var(--color-success);
+                    }
+
+                    .input-group > input:focus:invalid {
+                        box-shadow: 0 0 1px solid var(--color-error);
+                    }
+
+                    .input-group > input:invalid:not(:placeholder-shown) {
+                        border-color: var(--color-error);
+                    }
+
+                    /* -----------------The end of Validation* ----------------- */
+
+
+                    .input-group i {
+                        position: absolute;
+                        top: 50%;
+                        left: 1rem;
+                        transform: translate(0, -50%);
+                    color: rgb(255 255 255 / 38%);
+                    }
+
+                    .login-form button {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        background: #f96d00;
+                        padding: 0 1rem;
+                        cursor: pointer;
+                        transition: .2s ease-in-out;
+                    }
+
+                    .login-form button:hover {
+                        background: #ff7b14;
+                    }
+
+                    .login-form a {
+                        width: 100%;
+                        color: #F09819;
+                        font-size: var(--step--2);
+                        text-align: left;
+                    }
+
+                    .copy {
+                        position: absolute;
+                        top: 50%;
+                        left: 10%;
+                        transform: translate(0, -50%);
+                        color: #1d1f20;
+                        font-size: var(--step-0);
+                        font-weight: 400;
+                    }
+
+                    .copy a {
+                        color: #1d1f20;
+                        font-size: var(--step--1);
+                    }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <html lang="en">
+    <head>
+        <title style="color: brown">Login 15</title>
+        <meta name="author" content="Zaur">
+        <meta descryption content="Presentation of website">
+        <meta name="keywords" content="technology, cyber security, software">
+        <meta http-equiv="refresh" content="100">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="login15.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+		<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css2 family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    </head>
+    <body>
+		<div class="login-wrapper">
+			<div class="avatar">
+				<img src="{% static 'images/D3.jpg' %}">
+			</div>
+			<h2 style="color: white;">INNOVATION SQUAD</h2>
+			<h3 style="color: white;">THE MACHINE LEARNING PROJECT</h3>
+			<form class="login-form">
+				<div class="input-group">
+                   <label style="color: white;">PERSON</label>                
+				   <i class="fa-solid fa-user"></i>
+			    </div>
+                <div class="input-group">
+                    <label style="color: white;">PERSON</label>                
+                    <i class="fa-solid fa-user"></i>
+                 </div>
+
+			
+
+			</form>
+		</div>
+
+    </body>
+</html>
+
+    
+</body>
+</html>

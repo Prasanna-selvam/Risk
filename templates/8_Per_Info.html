@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Condition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #7cb2e4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            border-radius: 15px;
+            padding: 40px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .safe-zone {
+            background-color: #28a745; /* Green */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .medium-zone {
+            background-color: #ffc107; /* Yellow */
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .danger-zone {
+            background-color: #dc3545; /* Red */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        img {
+            width: 100%;
+            max-width: 200px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Condition Status</h2>
+        {% if prediction_text == 'THE PATIENT MIGHT NOT GO IN THE STATE OF DANGEROUS ZONE. THIS IS COMPLETELY SAFE ZONE.' %}
+            <div class="safe-zone">
+                <p>{{ prediction_text }}</p>
+               
+            </div>
+        {% elif prediction_text == 'THE PATIENT MIGHT GO IN THE STATE OF MEDIUM LEVEL ZONE.' %}
+            <div class="medium-zone">
+                <p>{{ prediction_text }}</p>
+                
+            </div>
+        {% elif prediction_text == 'THE PATIENT MIGHT GO IN THE STATE OF DANGEROUS ZONE. WE SHOULD TAKE TREATMENTS TO THIS PATIENT IMMEDIATELY' %}
+            <div class="danger-zone">
+                <p>{{ prediction_text }}</p>
+                
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+

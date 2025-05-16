@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    min-block-size: 25ch;
+    inline-size: 100%;
+    max-inline-size: 720px;
+    background: hsl(0 0% 90%);
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-inline: auto;
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  .place-items {
+    place-items: left;
+  }
+  
+  .place-content {
+    place-content: center;
+  }
+  
+  .align-items-and-content {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h2, p {
+    margin: 0;
+  }
+  
+  body {
+    background:url("/static/images/A40.jpg");
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: 100% 100%;
+  }
+  .back-to-home-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #12161b; /* Adjust the background color */
+        color: #fff; /* Adjust the text color */
+        text-decoration: none;
+        border-radius: 5px; /* Rounded corners */
+      }
+      
+      .back-to-home-button:hover {
+        background-color: #1f252b; /* Change the background color on hover */
+      }
+</style>
+<body>
+  <a href="{% url 'Home_4' %}" class="back-to-home-button">Back to Home</a>
+	<div class="place-items container flex">
+		<h1>DEMERITS</h1>
+		<pre><code></code></pre>
+		<p>•	Their process required lot of computational power.</p>
+		<P>•	They did not deploy the model.</P>
+		<P>•	Their accuracy much lower than ours.</P><br><br>
+
+		<h1>MERITS</h1>
+		<pre><code></code></pre>
+		<p>•	We build a large scalable application for deployment purpose.</p>
+		<P>•	Accuracy will be improved.</P>
+		<P>•	Our maintained and scalable data.</P><br>
+	  </div>
+	  
+</body>
+</html>

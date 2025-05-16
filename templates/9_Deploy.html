@@ -1,0 +1,501 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	*, *:before, *:after {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	  }
+	  
+	  body {
+		font-family: 'Nunito', sans-serif;
+		color: #384047;
+	  }
+	  
+	  form {
+		max-width: 300px;
+		margin: 10px auto;
+		padding: 10px 20px;
+		background: #f4f7f8;
+		border-radius: 8px;
+	  }
+	  
+	  h1 {
+		margin: 0 0 30px 0;
+		text-align: center;
+	  }
+	  
+	  input[type="text"],
+	  input[type="password"],
+	  input[type="date"],
+	  input[type="datetime"],
+	  input[type="email"],
+	  input[type="number"],
+	  input[type="search"],
+	  input[type="tel"],
+	  input[type="time"],
+	  input[type="url"],
+	  textarea,
+	  select {
+		background: rgba(255,255,255,0.1);
+		border: none;
+		font-size: 16px;
+		height: auto;
+		margin: 0;
+		outline: 0;
+		padding: 15px;
+		width: 100%;
+		background-color: #e8eeef;
+		color: #8a97a0;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+		margin-bottom: 30px;
+	  }
+	  
+	  input[type="radio"],
+	  input[type="checkbox"] {
+		margin: 0 4px 8px 0;
+	  }
+	  
+	  select {
+		padding: 6px;
+		height: 32px;
+		border-radius: 2px;
+	  }
+	  
+	  button {
+		padding: 19px 39px 18px 39px;
+		color: #FFF;
+		background-color: #4bc970;
+		font-size: 18px;
+		text-align: center;
+		font-style: normal;
+		border-radius: 5px;
+		width: 100%;
+		border: 1px solid #3ac162;
+		border-width: 1px 1px 3px;
+		box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+		margin-bottom: 10px;
+	  }
+	  
+	  fieldset {
+		margin-bottom: 30px;
+		border: none;
+	  }
+	  
+	  legend {
+		font-size: 1.4em;
+		margin-bottom: 10px;
+	  }
+	  
+	  label {
+		display: block;
+		margin-bottom: 8px;
+	  }
+	  
+	  label.light {
+		font-weight: 300;
+		display: inline;
+	  }
+	  
+	  .number {
+		background-color: #5fcf80;
+		color: #fff;
+		height: 30px;
+		width: 30px;
+		display: inline-block;
+		font-size: 0.8em;
+		margin-right: 4px;
+		line-height: 30px;
+		text-align: center;
+		text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+		border-radius: 100%;
+	  }
+	  
+	  @media screen and (min-width: 480px) {
+	  
+		form {
+		  max-width: 480px;
+		}
+	  
+	  }
+	  .back-to-home-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff; /* Adjust the background color */
+        color: #fff; /* Adjust the text color */
+        text-decoration: none;
+        border-radius: 5px; /* Rounded corners */
+      }
+      
+      .back-to-home-button:hover {
+        background-color: #0056b3; /* Change the background color on hover */
+      }
+      
+	  
+</style>
+<body>
+	<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+	</div>
+	<a href="{% url 'Home_4' %}" class="back-to-home-button">Back to Home</a>
+</div>
+      <div class="row">
+    <div class="col-md-12"><br><br>
+	<center><h1 style="color:lightgreen;">{{ prediction_text }}</h1></center><br><br>
+      <form method="post">
+	  {% csrf_token %}
+        <h1> MODEL </h1>
+        
+        <fieldset>
+          
+          <legend><span class="number">i</span> Enter Info:</legend>
+        
+		  <label for="age">age:</label>
+          <input type="number" id="age" name="age">
+		  
+		  <label for="BMI">bmi:</label>
+          <input type="number" id="BMI" name="BMI">
+		  
+		  <label for="hypertensive">hypertensive:</label>
+          <input type="number" id="hypertensive" name="hypertensive">		  
+		
+		
+		  
+		  <label for="diabetes">diabetes:</label>
+          <input type="number" id="diabetes" name="diabetes">
+		  
+		
+		  
+		  <label for="depression">depression:</label>
+          <input type="number" id="depression" name="depression">
+		  
+		  <label for="Hyperlipemia">Hyperlipemia:</label>
+          <input type="number" id="Hyperlipemia" name="Hyperlipemia">
+		  
+		  <label for="Renal failure">Renal failure:</label>
+          <input type="number" id="Renal failure" name="Renal failure">
+		  
+		  <label for="COPD">COPD:</label>
+          <input type="number" id="COPD" name="COPD">
+		  
+		  <label for="heart rate">heart rate:</label>
+          <input type="number" id="heart rate" name="heart rate">
+		  
+		  <label for="Systolic blood pressure">Systolic blood pressure:</label>
+          <input type="number" id="Systolic blood pressure" name="Systolic blood pressure">
+		  
+		  <label for="Diastolic blood pressure">Diastolic blood pressure:</label>
+          <input type="number" id="Diastolic blood pressure" name="Diastolic blood pressure">
+		  
+		  <label for="Respiratory rate">Respiratory rate:</label>
+          <input type="number" id="Respiratory rate" name="Respiratory rate">
+		  
+		  <label for="temperature">temperature:</label>
+          <input type="number" id="temperature" name="temperature">
+		  
+		  <label for="SP O2">SP O2:</label>
+          <input type="number" id="SP O2" name="SP O2">
+		  
+		  <label for="Urine output">Urine output:</label>
+          <input type="number" id="Urine output" name="Urine output">
+		  
+		 
+		  
+		  
+		  <label for="laRBC">RBC:</label>
+          <input type="number" id="RBC" name="RBC">
+		  
+		  
+		  <label for="MCH">MCH:</label>
+          <input type="number" id="MCH" name="MCH"> 
+		  
+		 
+		  
+		  
+
+		  
+		  
+		  
+		  <label for="Neutrophils">Neutrophils:</label>
+          <input type="number" id="Neutrophils" name="Neutrophils">
+		  
+		  <label for="Basophils">Basophils:</label>
+          <input type="number" id="Basophils" name="Basophils"> 
+		  
+		  
+		 
+		  
+		
+		  <label for="Creatine kinase">Creatine kinase:</label>
+          <input type="number" id="Creatine kinase" name="Creatine kinase">
+		  
+		  <label for="Creatinine">Creatinine:</label>
+          <input type="number" id="Creatinine" name="Creatinine">
+		 
+		  <label for="glucose">glucose:</label>
+          <input type="number" id="glucose" name="glucose">
+		  
+		  <label for="Blood potassium">Blood potassium:</label>
+          <input type="number" id="Blood potassium" name="Blood potassium">
+		  
+		  <label for="Blood sodium">Blood sodium:</label>
+          <input type="number" id="Blood sodium" name="Blood sodium">
+		  
+		  <label for="Blood calcium">Blood calcium:</label>
+          <input type="number" id="Blood calcium" name="Blood calcium">
+		  
+		  <label for="Chloride">Chloride:</label>
+          <input type="number" id="Chloride" name="Chloride">
+		  
+		  
+		  
+		  
+		  
+		  <label for="PH">PH:</label>
+          <input type="number" id="PH" name="PH">
+		  
+	
+		  
+		  <label for="Lactic acid">Lactic acid:</label>
+          <input type="number" id="Lactic acid" name="Lactic acid">
+		  
+		  <label for="PCO2">PCO2:</label>
+          <input type="number" id="PCO2" name="PCO2">
+		  
+	
+        </fieldset>
+
+       
+        <button type="submit">SUBMIT</button>
+        
+       </form>
+        </div>
+      </div>
+    </body>
+</html>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Form Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #384047;
+            background-color: #f4f7f8;
+        }
+        .form-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            font-weight: 600;
+            color: #384047;
+        }
+        .form-control {
+            background-color: #e8eeef;
+            color: #8a97a0;
+        }
+        .form-control:focus {
+            border-color: #4bc970;
+            box-shadow: 0 0 5px rgba(75, 201, 112, 0.5);
+        }
+        .submit-button {
+            background-color: #4bc970;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            width: 100%;
+        }
+        .back-to-home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .back-to-home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    
+    <a class="rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300" href="{% url 'request' %}">Request</a>
+
+    <form method="post" action="{% url 'Deploy_9' %}">
+        {% csrf_token %}
+        <h2 class="text-center mb-4">Model </h2>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" id="age" name="age" class="form-control">
+            </div>
+			<div class="col-md-6 mb-3">
+				<label for="gender" class="form-label">Gender</label>
+				<select id="gender" name="gendera" class="form-select">
+					<option value="1">Female</option>
+					<option value="2">Male</option>
+				</select>
+			</div>
+			
+            <div class="col-md-6 mb-3">
+                <label for="BMI" class="form-label">BMI</label>
+                <input type="text" id="BMI" name="BMI" class="form-control">
+            </div>
+            
+            <div class="col-md-6 mb-3">
+                <label for="hypertensive" class="form-label">Hypertensive</label>
+                <input type="text" id="hypertensive" name="hypertensive" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="diabetes" class="form-label">Diabetes</label>
+                <input type="text" id="diabetes" name="diabetes" class="form-control">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="depression" class="form-label">Depression</label>
+                <input type="text" id="depression" name="depression" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="heart rate" class="form-label">Heart Rate</label>
+                <input type="text" id="heart rate" name="heart rate"  value="{{val2}}"  class="form-control">
+            </div>
+   
+
+            
+            <div class="col-md-6 mb-3">
+                <label for="Systolic blood pressure" class="form-label">Systolic Blood Pressure</label>
+                <input type="text" id="Systolic blood pressure" name="Systolic blood pressure" class="form-control">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="Diastolic blood pressure" class="form-label">Diastolic Blood Pressure</label>
+                <input type="text" id="Diastolic blood pressure" name="Diastolic blood pressure" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Respiratory rate" class="form-label">Respiratory Rate</label>
+                <input type="text" id="Respiratory rate" name="Respiratory rate"  value="{{val4}}"  class="form-control">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="temperature" class="form-label">Temperature</label>
+                <input type="text" id="temperature" name="temperature" value="{{val1}}" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="SP O2" class="form-label">SP O2</label>
+                <input type="text" id="SP O2" name="SP O2" class="form-control">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="Urine output" class="form-label">Urine Output</label>
+                <input type="text" id="Urine output" name="Urine output" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="RBC" class="form-label">RBC</label>
+                <input type="text" id="RBC" name="RBC" class="form-control">
+            </div>
+
+			<div class="col-md-6 mb-3">
+                <label for="MCH" class="form-label">MCH</label>
+                <input type="text" id="MCH" name="MCH" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Neutrophils" class="form-label">MCHC</label>
+                <input type="text" id="Neutrophils" name="MCHC" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Basophils" class="form-label">MCV</label>
+                <input type="text" id="Basophils" name="MCV" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Creatine kinase" class="form-label">RDW</label>
+                <input type="text" id="Creatine kinase" name="RDW" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Creatinine" class="form-label">Creatinine</label>
+                <input type="text" id="Creatinine" name="Creatinine" class="form-control">
+            </div>
+			<div class="col-md-6 mb-3">
+                <label for="Creatinine" class="form-label">Urea nitrogen</label>
+                <input type="text" id="Creatinine" name="Urea nitrogen" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="glucose" class="form-label">Glucose</label>
+                <input type="text" id="glucose" name="glucose"  value="{{val3}}" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Blood potassium" class="form-label">Blood Potassium</label>
+                <input type="text" id="Blood potassium" name="Blood potassium" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Blood sodium" class="form-label">Blood Sodium</label>
+                <input type="text" id="Blood sodium" name="Blood sodium" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Blood calcium" class="form-label">Blood Calcium</label>
+                <input type="text" id="Blood calcium" name="Blood calcium" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Chloride" class="form-label">Chloride</label>
+                <input type="text" id="Chloride" name="Chloride" class="form-control">
+            </div>
+			<div class="col-md-6 mb-3">
+                <label for="PCO2" class="form-label">Magnesium ion</label>
+                <input type="text" id="PCO2" name="Magnesium ion" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="PH" class="form-label">PH</label>
+                <input type="text" id="PH" name="PH" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Lactic acid" class="form-label">Lactic Acid</label>
+                <input type="text" id="Lactic acid" name="Lactic acid" class="form-control">
+            </div>
+			<div class="col-md-6 mb-3">
+                <label for="PCO2" class="form-label">PCO2</label>
+                <input type="text" id="PCO2" name="PCO2" class="form-control">
+            </div>
+        </div>
+            
+           
+        </div>
+
+        <button type="submit" class="submit-button mt-4">Submit</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+{{ prediction_text }}
+</html>
